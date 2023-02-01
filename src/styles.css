@@ -1,0 +1,134 @@
+html,
+body {
+  height: 100%;
+  transition: background-color 0.3s ease-in-out;
+}
+#app {
+  height: 100%;
+}
+body {
+  font-family: sans-serif;
+  text-align: center;
+  overscroll-behavior: contain;
+}
+h1,
+h2 {
+  user-select: none;
+  color: #747e7e;
+}
+.object {
+  display: inline-block;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 2rem;
+  background-color: #00ccbf;
+  margin: 2rem auto 5rem;
+  user-select: none;
+}
+.light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 2rem;
+  background-color: #ff5f5d;
+  box-shadow: 0 0 1rem #ff5f5d;
+  cursor: grab;
+}
+.light2 {
+  position: absolute;
+  top: 0;
+  left: 3rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 2rem;
+  background-color: rgb(12, 114, 247);
+  box-shadow: 0 0 1rem rgb(12, 114, 247);
+  cursor: grab;
+}
+.code {
+  border: 0;
+  border-radius: 1rem;
+  background-color: #eee;
+  resize: none;
+  min-width: 60%;
+  height: 5rem;
+  outline: none;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+textPath {
+  font-weight: 700;
+  font-size: 1.4rem;
+  fill: #fff;
+}
+#circle {
+  transform: scale(1.125);
+  transform-origin: center;
+}
+svg {
+  animation: rot 20s linear infinite;
+  user-select: none;
+  opacity: 0.5;
+}
+@keyframes rot {
+  0% {
+    transform: scale(0.7) rotate(359deg);
+  }
+  100% {
+    transform: scale(0.7) rotate(0deg);
+  }
+}
+#color-picker {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 2rem;
+  border: 0.15rem solid #fff;
+  box-shadow: 0 0 0.5rem rgba(116, 126, 126, 0.7);
+  background-color: #000;
+  cursor: pointer;
+}
+#color-picker .picker_wrapper.popup {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  left: inherit;
+  margin: 0;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 2rem rgb(0 0 0 / 30%);
+}
+#color-picker .picker_wrapper.popup .picker_arrow {
+  display: none;
+}
+#color-picker .picker_slider {
+  border-radius: 1rem;
+}
+#color-picker .picker_sl {
+  border-radius: 0.5rem;
+}
+#color-picker .picker_editor input {
+  border-radius: 0.5rem;
+}
+#color-picker .picker_sample,
+#color-picker .picker_sample::before {
+  border-radius: 0.5rem;
+}
+#color-picker .picker_done button {
+  border-radius: 0.5rem;
+}
+#color-picker .picker_selector {
+  border-radius: 1rem;
+}
+
+body.darkmode {
+  background-color: #16181e;
+}
+body.darkmode .code {
+  background-color: rgba(115, 150, 185, 0.1);
+  color: rgb(172, 194, 214);
+}
